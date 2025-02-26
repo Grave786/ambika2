@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-hero: "Poppins", sans-serif;
+  
+  /* Colors */
+  --color-primary: oklch(0.61 0.23 30);  /* Hero Red */
+  --color-secondary: oklch(0 0 0);      /* Black */
+  --color-background: oklch(1 0 0);     /* White */
+
+  /* Border Radius */
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+
+  /* Shadows */
+  --shadow-hero: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Tailwind Classes */
+.btn-primary {
+  @apply bg-[var(--color-primary)] text-white font-[var(--font-hero)] px-6 py-3 rounded-[var(--radius-xl)] shadow-[var(--shadow-hero)] hover:bg-red-700 transition;
+}
+
+.btn-secondary {
+  @apply bg-[var(--color-secondary)] text-white font-[var(--font-hero)] px-6 py-3 rounded-[var(--radius-xl)] shadow-[var(--shadow-hero)] hover:bg-gray-900 transition;
+}
